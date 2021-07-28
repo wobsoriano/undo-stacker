@@ -1,6 +1,7 @@
 {
   "name": "undo-stacker",
   "version": "0.0.5",
+  "license": "MIT",
   "main": "./dist/undo-stacker.umd.js",
   "module": "./dist/undo-stacker.es.js",
   "types": "./index.d.ts",
