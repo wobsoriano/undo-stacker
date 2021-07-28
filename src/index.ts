@@ -23,10 +23,10 @@ export default function createStack<T>(current: T) {
 	}
 
 	return {
-		push: (value: T) => {
+		push: (value: T | ((payload: T) => T)) => {
 			stack.length = index;
-			stack[index++] =
-				typeof value === 'function' ? (value)(current) : value;
+			// @ts-ignore
+			stack[index++] = typeof value === 'function' ? (value)(current) : value;
 
 			return update();
 		},

@@ -1,5 +1,5 @@
 declare function createStack<T>(current: T): {
-    push: (value: T) => T;
+    push: (value: T | ((payload: T) => T)) => T;
     undo: () => T;
     redo: () => T;
 };
