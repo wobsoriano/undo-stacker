@@ -3,3 +3,5 @@ declare function createStack<T>(current: T): {
     undo: () => T;
     redo: () => T;
 };
+
+export default createStack;
