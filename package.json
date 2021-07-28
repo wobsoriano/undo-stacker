@@ -1,6 +1,6 @@
 {
   "name": "undo-stacker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./dist/undo-stacker.umd.js",
   "module": "./dist/undo-stacker.es.js",
   "types": "./index.d.ts",
