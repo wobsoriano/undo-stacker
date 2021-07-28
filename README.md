@@ -1,6 +1,6 @@
 # undo-stacker
 
-A Port of [svelte-undo](https://github.com/Rich-Harris/svelte-undo) without svelte. A small utility for managing an undo stack.
+A small utility for managing an undo stack.
 
 ## Usage
 
@@ -44,6 +44,10 @@ console.log((value = stack.redo())); // { answer: 100 }
 ```
 
 Don't mutate the objects you push to the undo stack; chaos will result. Instead, create a fresh copy each time, either manually or using something like [Immer](https://immerjs.github.io/immer/).
+
+## Credits
+
+This is an exact copy of [svelte-undo](https://github.com/Rich-Harris/svelte-undo) without the svelte dependency.
 
 ## License
 
