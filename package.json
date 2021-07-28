@@ -1,0 +1,28 @@
+{
+  "name": "undo-stacker",
+  "version": "0.0.1",
+  "main": "./dist/undo-stacker.umd.js",
+  "module": "./dist/undo-stacker.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/undo-stacker.es.js",
+      "require": "./dist/undo-stacker.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4"
+  },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wobsoriano/undo-stacker.git"
+  }
+}
