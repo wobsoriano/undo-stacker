@@ -1,29 +1,29 @@
 {
   "name": "undo-stacker",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
-  "main": "./dist/undo-stacker.umd.js",
-  "module": "./dist/undo-stacker.es.js",
-  "types": "./index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "exports": {
-    ".": {
-      "import": "./dist/undo-stacker.es.js",
-      "require": "./dist/undo-stacker.umd.js"
-    }
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
   },
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc && vite build",
-    "test": "node --experimental-loader esbuild-node-loader node_modules/uvu/bin.js test"
+    "build-fast": "tsup src/index.ts --format cjs,esm",
+    "build": "pnpm run build-fast -- --dts-resolve",
+    "test": "vitest run",
+    "release": "bumpp --commit --push --tag && pnpm publish",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "esbuild-node-loader": "^0.1.1",
+    "bumpp": "^7.1.1",
+    "tsup": "^5.11.13",
     "typescript": "^4.3.2",
-    "uvu": "^0.5.1",
-    "vite": "^2.4.4"
+    "vitest": "^0.5.9"
   },
   "files": [
-    "dist",
-    "index.d.ts"
+    "dist"
   ],
   "repository": {
     "type": "git",
