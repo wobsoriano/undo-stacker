@@ -4,7 +4,7 @@ export default function createStack<T>(current: T) {
   let index = stack.length
 
   function update() {
-    current = stack[index - 1]
+    current = JSON.parse(JSON.stringify(stack[index - 1]))
 
     return current
   }
