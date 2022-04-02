@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.16.1",
+    "@sindresorhus/safe-stringify": "^0.1.0",
     "bumpp": "^7.1.1",
     "eslint": "^8.10.0",
     "tsup": "^5.12.3",

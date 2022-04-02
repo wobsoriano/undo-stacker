@@ -1,10 +1,12 @@
+import safeStringify from '@sindresorhus/safe-stringify'
+
 export default function createStack<T>(current: T) {
   const stack = [current]
 
   let index = stack.length
 
   function update() {
-    current = JSON.parse(JSON.stringify(stack[index - 1]))
+    current = JSON.parse(safeStringify(stack[index - 1]))
 
     return current
   }
