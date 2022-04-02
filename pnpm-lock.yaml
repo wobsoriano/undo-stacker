@@ -4,17 +4,17 @@ specifiers:
   '@antfu/eslint-config': ^0.16.1
   bumpp: ^7.1.1
   eslint: ^8.10.0
-  tsup: ^5.11.13
+  tsup: ^5.12.3
   typescript: ^4.3.2
-  vitest: ^0.5.9
+  vitest: ^0.8.2
 
 devDependencies:
   '@antfu/eslint-config': 0.16.1_eslint@8.10.0+typescript@4.6.2
   bumpp: 7.1.1
   eslint: 8.10.0
-  tsup: 5.11.13_typescript@4.6.2
+  tsup: 5.12.3_typescript@4.6.2
   typescript: 4.6.2
-  vitest: 0.5.9
+  vitest: 0.8.2
 
 packages:
 
@@ -2497,8 +2497,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/5.11.13_typescript@4.6.2:
-    resolution: {integrity: sha512-NVMK01gVmojZn7+iZwxRK1CzW2BIabaVMyEjs7Nm9lm4DrSf7IAqs2F3fg0vT7rH72x1cIBsW9U/TlWrCvHVQQ==}
+  /tsup/5.12.3_typescript@4.6.2:
+    resolution: {integrity: sha512-H1NANXhG01koKC5DWblNiPzsIwFBzGDvoEdxR1jrlNcWN0ydIEMsPhafrz5mhLNrYFn2suGlOwYZWfJO0HIPEg==}
     hasBin: true
     peerDependencies:
       typescript: ^4.1.0
@@ -2624,9 +2624,9 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.5.9:
-    resolution: {integrity: sha512-R8lRP9Q1yIbwr8pDf2gvw4PFe8H5YMyHhBcdyfnUh6toLfCR10jrdI/WkNxdo5I4H/9XrMX9t+SAavdJExNdKg==}
-    engines: {node: '>=14.14.0'}
+  /vitest/0.8.2:
+    resolution: {integrity: sha512-dTFDJl2F3pkWy1tcE3M29LasklhgtP7M88kT7AJcAurX7nCl/eWu1PQeSzjzWQyUbDq2p8jqdoLETd7MDeibcA==}
+    engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
       '@vitest/ui': '*'

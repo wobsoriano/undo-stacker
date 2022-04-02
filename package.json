@@ -2,12 +2,19 @@
   "name": "undo-stacker",
   "version": "0.0.9",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wobsoriano/undo-stacker.git"
+  },
+  "files": [
+    "dist"
+  ],
   "exports": {
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm",
@@ -21,16 +28,9 @@
     "@antfu/eslint-config": "^0.16.1",
     "bumpp": "^7.1.1",
     "eslint": "^8.10.0",
-    "tsup": "^5.11.13",
+    "tsup": "^5.12.3",
     "typescript": "^4.3.2",
-    "vitest": "^0.5.9"
-  },
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wobsoriano/undo-stacker.git"
+    "vitest": "^0.8.2"
   },
   "eslintConfig": {
     "extends": "@antfu"
