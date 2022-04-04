@@ -20,11 +20,13 @@ export default function createStack<T>(current: T) {
       return update()
     },
     undo: () => {
-      if (index > 1) index -= 1
+      if (index > 1)
+        index -= 1
       return update()
     },
     redo: () => {
-      if (index < stack.length) index += 1
+      if (index < stack.length)
+        index += 1
       return update()
     },
   }

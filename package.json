@@ -6,16 +6,16 @@
     "type": "git",
     "url": "https://github.com/wobsoriano/undo-stacker.git"
   },
-  "files": [
-    "dist"
-  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm",
     "build": "pnpm run build-fast -- --dts-resolve --minify",
@@ -24,8 +24,11 @@
     "prepublishOnly": "pnpm run test && pnpm run build",
     "lint": "eslint \"**/*.{ts,js}\""
   },
+  "dependencies": {
+    "@sindresorhus/safe-stringify": "^0.1.0"
+  },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.16.1",
+    "@antfu/eslint-config-ts": "^0.19.4",
     "bumpp": "^7.1.1",
     "eslint": "^8.10.0",
     "tsup": "^5.12.3",
@@ -33,12 +36,9 @@
     "vitest": "^0.8.2"
   },
   "eslintConfig": {
-    "extends": "@antfu"
+    "extends": "@antfu/eslint-config-ts"
   },
   "eslintIgnore": [
     "dist"
-  ],
-  "dependencies": {
-    "@sindresorhus/safe-stringify": "^0.1.0"
-  }
+  ]
 }
