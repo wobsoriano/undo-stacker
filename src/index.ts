@@ -1,12 +1,10 @@
-import * as devalue from 'devalue'
-
 export default function createStack<T>(current: T) {
   const stack = [current]
 
   let index = stack.length
 
   function update() {
-    current = devalue.parse(devalue.stringify(stack[index - 1]))
+    current = stack[index - 1]
 
     return current
   }
