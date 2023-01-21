@@ -1,4 +1,4 @@
-import safeStringify from '@sindresorhus/safe-stringify'
+import * as devalue from 'devalue'
 
 export default function createStack<T>(current: T) {
   const stack = [current]
@@ -6,7 +6,7 @@ export default function createStack<T>(current: T) {
   let index = stack.length
 
   function update() {
-    current = JSON.parse(safeStringify(stack[index - 1]))
+    current = devalue.parse(devalue.stringify(stack[index - 1]))
 
     return current
   }
