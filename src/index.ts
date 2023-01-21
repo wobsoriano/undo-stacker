@@ -12,10 +12,10 @@ export default function createStack<T>(current: T) {
   }
 
   return {
-    push: (value: T | ((payload: T) => T)) => {
+    push: (value: T | ((current: T) => T)) => {
       stack.length = index
       // @ts-expect-error: Value can be a function
-      stack[index++] = typeof value === 'function' ? value(current) : value
+      stack[index++] = typeof value === 'function' ? (value)(current) : value
 
       return update()
     },
