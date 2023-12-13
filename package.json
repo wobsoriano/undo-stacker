@@ -23,17 +23,14 @@
     "test": "vitest run",
     "release": "bumpp --commit --push --tag && pnpm publish",
     "prepublishOnly": "pnpm run test && pnpm run build",
-    "lint": "eslint ."
+    "lint": "biome check src",
+    "format": "biome format src --write"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.34.1",
-    "bumpp": "^8.2.1",
-    "eslint": "^8.32.0",
-    "tsup": "^6.5.0",
-    "typescript": "^4.9.4",
-    "vitest": "^0.27.2"
-  },
-  "eslintConfig": {
-    "extends": "@antfu"
+    "@biomejs/biome": "1.4.1",
+    "bumpp": "^9.2.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
   }
 }
